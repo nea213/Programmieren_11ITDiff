@@ -1,0 +1,5 @@
+D:\OneDrive\Schule\#PT Diff\Handy Projekt\PT Diff Repo\DN_HandyBibiliothek\bin\Debug\DN_HandyBibiliothek.dll
+D:\OneDrive\Schule\#PT Diff\Handy Projekt\PT Diff Repo\DN_HandyBibiliothek\bin\Debug\DN_HandyBibiliothek.pdb
+D:\OneDrive\Schule\#PT Diff\Handy Projekt\PT Diff Repo\DN_HandyBibiliothek\obj\Debug\DN_Handy_Bibiliothek.csproj.CoreCompileInputs.cache
+D:\OneDrive\Schule\#PT Diff\Handy Projekt\PT Diff Repo\DN_HandyBibiliothek\obj\Debug\DN_HandyBibiliothek.dll
+D:\OneDrive\Schule\#PT Diff\Handy Projekt\PT Diff Repo\DN_HandyBibiliothek\obj\Debug\DN_HandyBibiliothek.pdb

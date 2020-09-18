@@ -1,0 +1,10 @@
+D:\OneDrive\Schule\#PT Diff\Handy Projekt\PT Diff Repo\DN_Handy\bin\Debug\DN_Handy.exe.config
+D:\OneDrive\Schule\#PT Diff\Handy Projekt\PT Diff Repo\DN_Handy\bin\Debug\DN_Handy.exe
+D:\OneDrive\Schule\#PT Diff\Handy Projekt\PT Diff Repo\DN_Handy\bin\Debug\DN_Handy.pdb
+D:\OneDrive\Schule\#PT Diff\Handy Projekt\PT Diff Repo\DN_Handy\bin\Debug\DN_HandyBibiliothek.dll
+D:\OneDrive\Schule\#PT Diff\Handy Projekt\PT Diff Repo\DN_Handy\bin\Debug\DN_HandyBibiliothek.pdb
+D:\OneDrive\Schule\#PT Diff\Handy Projekt\PT Diff Repo\DN_Handy\obj\Debug\DN_Handy.csprojAssemblyReference.cache
+D:\OneDrive\Schule\#PT Diff\Handy Projekt\PT Diff Repo\DN_Handy\obj\Debug\DN_Handy.csproj.CoreCompileInputs.cache
+D:\OneDrive\Schule\#PT Diff\Handy Projekt\PT Diff Repo\DN_Handy\obj\Debug\DN_Handy.csproj.CopyComplete
+D:\OneDrive\Schule\#PT Diff\Handy Projekt\PT Diff Repo\DN_Handy\obj\Debug\DN_Handy.exe
+D:\OneDrive\Schule\#PT Diff\Handy Projekt\PT Diff Repo\DN_Handy\obj\Debug\DN_Handy.pdb
