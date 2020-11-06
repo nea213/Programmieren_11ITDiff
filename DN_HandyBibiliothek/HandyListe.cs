@@ -67,5 +67,21 @@ namespace DN_Handy_Bibiliothek
             }
             return lowestHandy;
         }
-    }
+
+
+        public HandyListe getCheapestHandies()
+        {
+            HandyListe lowestHandy = new HandyListe();
+            foreach (var item in this)
+            {
+                if (item.Preis < lowestHandy.Preis)
+                {
+                    lowestHandy = item;
+                }
+            }
+            return lowestHandy;
+        }
+
+
+        }
 }
