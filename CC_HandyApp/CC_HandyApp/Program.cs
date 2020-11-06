@@ -20,7 +20,7 @@ namespace CC_HandyApp
                     Id = i + 1,
                     Price = Math.Round((rnd.NextDouble() * (400 - 100) + 400), 2),
                     Model = new string(chars.Select(c => chars[rnd.Next(chars.Length)]).Take(8).ToArray()),
-                    Producer = producers[rnd.Next(0,3)],
+                    Producer = producers[rnd.Next(0, producers.Length)],
                     SerialNumber = new string(chars.Select(c => chars[rnd.Next(chars.Length)]).Take(8).ToArray()),
                 };
                 
