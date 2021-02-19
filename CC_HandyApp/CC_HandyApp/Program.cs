@@ -12,6 +12,7 @@ namespace CC_HandyApp
             var handyList = new HandyList();
             var Binary = new Binary<HandyList>();
             var XML = new XML<HandyList>();
+            var Json = new JsonSerial<HandyList>();
             
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
             var rnd = new Random();
@@ -38,16 +39,19 @@ namespace CC_HandyApp
             handyList.Serialize(@"D:\SchulSachen\Programmieren_11ITDiff\object_xml.txt");
             handyList.Deserialize(@"D:\SchulSachen\Programmieren_11ITDiff\object_xml.txt");
             
+            handyList.ConnectSerializer(Json);
+            handyList.Serialize(@"D:\SchulSachen\Programmieren_11ITDiff\object_json.txt");
+            handyList.Deserialize(@"D:\SchulSachen\Programmieren_11ITDiff\object_json.txt");
             
-            // foreach (var h in handyList)
-            // {
-            //     Console.WriteLine(h.Id);
-            //     Console.WriteLine(h.Producer);
-            //     Console.WriteLine(h.Model);
-            //     Console.WriteLine(h.SerialNumber);
-            //     Console.WriteLine(h.Price);
-            //     Console.WriteLine("_______________________________");
-            // }
+            foreach (var h in handyList)
+            {
+                Console.WriteLine(h.Id);
+                Console.WriteLine(h.Producer);
+                Console.WriteLine(h.Model);
+                Console.WriteLine(h.SerialNumber);
+                Console.WriteLine(h.Price);
+                Console.WriteLine("_______________________________");
+            }
         }
     }
 }
