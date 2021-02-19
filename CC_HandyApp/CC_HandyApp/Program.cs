@@ -8,7 +8,7 @@ namespace CC_HandyApp
     {
         static void Main(string[] args)
         {
-            var handyList = new HandyListClass();
+            var handyList = new HandyList();
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
             var rnd = new Random();
             string[] producers = {"Apple", "Samsung", "Huawei"};
@@ -27,7 +27,18 @@ namespace CC_HandyApp
                 handyList.Add(h);
             }
 
-            foreach (var h in handyList)
+            // foreach (var h in handyList)
+            // {
+            //     Console.WriteLine(h.Id);
+            //     Console.WriteLine(h.Producer);
+            //     Console.WriteLine(h.Model);
+            //     Console.WriteLine(h.SerialNumber);
+            //     Console.WriteLine(h.Price);
+            //     Console.WriteLine("_______________________________");
+            // }
+            
+            handyList.Serialize(@"D:\SchulSachen\Programmieren_11ITDiff\object.txt");
+            foreach (var h in handyList.Deserialize(@"D:\SchulSachen\Programmieren_11ITDiff\object.txt"))
             {
                 Console.WriteLine(h.Id);
                 Console.WriteLine(h.Producer);

@@ -1,10 +1,13 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using CC_HandyClass;
 
 namespace CC_HandyApp
 {
-    public class HandyListClass : List<Handy>
+    [Serializable()]
+    public class HandyList : List<Handy>
     {
         public int CountProducer(string producer)
         {
@@ -47,9 +50,9 @@ namespace CC_HandyApp
             return result;
         }
 
-        public HandyListClass SearchProducer(string producer)
+        public HandyList SearchProducer(string producer)
         {
-            var fundHandys = new HandyListClass();
+            var fundHandys = new HandyList();
 
             foreach (var handy in this)
             {
@@ -76,5 +79,24 @@ namespace CC_HandyApp
 
             return result;
         }
+
+        public void Serialize(string path)
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Create, FileAccess.Write);
+            formatter.Serialize(stream, this);
+            stream.Close();
+        }
+
+        public HandyList Deserialize(string path)
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read);
+            var result = (HandyList) formatter.Deserialize(stream);
+            this.Clear();
+            this.AddRange(result);
+            stream.Close();
+            return result;
+        } 
     }
 }

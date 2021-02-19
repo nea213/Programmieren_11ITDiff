@@ -2,6 +2,7 @@
 
 namespace CC_HandyClass
 {
+    [Serializable()]
     public class Handy : DomainObject
     {
         public string Producer { get; set; }
@@ -10,7 +11,7 @@ namespace CC_HandyClass
         public double Price { get; set; }
     }
 
-
+    [Serializable()]
     public abstract class DomainObject
     {
         public Guid Id { get; set; }
