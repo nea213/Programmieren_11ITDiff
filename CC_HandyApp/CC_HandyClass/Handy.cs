@@ -1,11 +1,18 @@
-﻿namespace CC_HandyClass
+﻿using System;
+
+namespace CC_HandyClass
 {
-    public class Handy
+    public class Handy : GuidId
     {
-        public int Id { get; set; }
         public string Producer { get; set; }
         public string Model { get; set; }
         public string SerialNumber { get; set; }
         public double Price { get; set; }
+    }
+
+
+    public abstract class GuidId
+    {
+        public Guid Id { get; set; }
     }
 }

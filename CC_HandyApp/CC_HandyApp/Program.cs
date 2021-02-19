@@ -17,7 +17,7 @@ namespace CC_HandyApp
             {
                 var h = new Handy
                 {
-                    Id = i + 1,
+                    Id = Guid.NewGuid(),
                     Price = Math.Round((rnd.NextDouble() * (400 - 100) + 400), 2),
                     Model = new string(chars.Select(c => chars[rnd.Next(chars.Length)]).Take(8).ToArray()),
                     Producer = producers[rnd.Next(0, producers.Length)],
@@ -36,17 +36,6 @@ namespace CC_HandyApp
                 Console.WriteLine(h.Price);
                 Console.WriteLine("_______________________________");
             }
-            
-            Console.WriteLine($"Apple: {handyList.CountProducer("Apple")}");
-            Console.WriteLine($"Samsung: {handyList.CountProducer("Samsung")}");
-            Console.WriteLine($"Huawei: {handyList.CountProducer("Huawei")}");
-            Console.WriteLine(($"Gesammtsumme: {handyList.SumPrice()}"));
-            Console.WriteLine(handyList.GetHandy(2).Producer);
-            foreach (var h in handyList.SearchProducer("Apple"))
-            {
-                Console.WriteLine(h.Producer);
-            }
-            Console.WriteLine(handyList.SearchCheapestHandy().Model);
         }
     }
 }

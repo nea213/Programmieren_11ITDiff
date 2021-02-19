@@ -33,7 +33,7 @@ namespace CC_HandyApp
             return count;
         }
 
-        public Handy GetHandy(int id)
+        public Handy GetHandy(Guid id)
         {
             var result = new Handy();
             foreach (var handy in this)
