@@ -9,6 +9,12 @@ namespace CC_HandyApp
     [Serializable()]
     public class HandyList : List<Handy>
     {
+        private ISerializeable<HandyList> _Serializeable { get; set; }
+        public void ConnectSerializer(ISerializeable<HandyList> s)
+        {
+            _Serializeable = s;
+        }
+        
         public int CountProducer(string producer)
         {
             var count = 0;
@@ -82,21 +88,14 @@ namespace CC_HandyApp
 
         public void Serialize(string path)
         {
-            BinaryFormatter formatter = new BinaryFormatter();
-            FileStream stream = new FileStream(path, FileMode.Create, FileAccess.Write);
-            formatter.Serialize(stream, this);
-            stream.Close();
+            this._Serializeable.Serialize(path, this);
         }
-
-        public HandyList Deserialize(string path)
+        
+        public void Deserialize(string path)
         {
-            BinaryFormatter formatter = new BinaryFormatter();
-            FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read);
-            var result = (HandyList) formatter.Deserialize(stream);
             this.Clear();
+            var result = this._Serializeable.Deserialize(path);
             this.AddRange(result);
-            stream.Close();
-            return result;
         } 
     }
 }

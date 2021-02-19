@@ -9,6 +9,8 @@ namespace CC_HandyApp
         static void Main(string[] args)
         {
             var handyList = new HandyList();
+            var Binary = new Binary<HandyList>();
+            
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
             var rnd = new Random();
             string[] producers = {"Apple", "Samsung", "Huawei"};
@@ -17,7 +19,6 @@ namespace CC_HandyApp
             {
                 var h = new Handy
                 {
-                    
                     Price = Math.Round((rnd.NextDouble() * (400 - 100) + 400), 2),
                     Model = new string(chars.Select(c => chars[rnd.Next(chars.Length)]).Take(8).ToArray()),
                     Producer = producers[rnd.Next(0, producers.Length)],
@@ -26,19 +27,12 @@ namespace CC_HandyApp
                 
                 handyList.Add(h);
             }
-
-            // foreach (var h in handyList)
-            // {
-            //     Console.WriteLine(h.Id);
-            //     Console.WriteLine(h.Producer);
-            //     Console.WriteLine(h.Model);
-            //     Console.WriteLine(h.SerialNumber);
-            //     Console.WriteLine(h.Price);
-            //     Console.WriteLine("_______________________________");
-            // }
+            handyList.ConnectSerializer(Binary);
             
             handyList.Serialize(@"D:\SchulSachen\Programmieren_11ITDiff\object.txt");
-            foreach (var h in handyList.Deserialize(@"D:\SchulSachen\Programmieren_11ITDiff\object.txt"))
+            handyList.Deserialize(@"D:\SchulSachen\Programmieren_11ITDiff\object.txt");
+            
+            foreach (var h in handyList)
             {
                 Console.WriteLine(h.Id);
                 Console.WriteLine(h.Producer);
