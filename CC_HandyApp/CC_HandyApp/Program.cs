@@ -17,7 +17,7 @@ namespace CC_HandyApp
             {
                 var h = new Handy
                 {
-                    Id = Guid.NewGuid(),
+                    
                     Price = Math.Round((rnd.NextDouble() * (400 - 100) + 400), 2),
                     Model = new string(chars.Select(c => chars[rnd.Next(chars.Length)]).Take(8).ToArray()),
                     Producer = producers[rnd.Next(0, producers.Length)],

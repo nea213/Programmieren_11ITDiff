@@ -2,7 +2,7 @@
 
 namespace CC_HandyClass
 {
-    public class Handy : GuidId
+    public class Handy : DomainObject
     {
         public string Producer { get; set; }
         public string Model { get; set; }
@@ -11,8 +11,13 @@ namespace CC_HandyClass
     }
 
 
-    public abstract class GuidId
+    public abstract class DomainObject
     {
         public Guid Id { get; set; }
+
+        protected DomainObject()
+        {
+            this.Id = Guid.NewGuid();
+        }
     }
 }
