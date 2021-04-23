@@ -87,5 +87,11 @@
             }
             listView_handy.Items.Refresh();
         }
+
+        private void restButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.list.Clear();
+            listView_handy.Items.Refresh();
+        }
     }
 }
