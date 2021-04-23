@@ -68,10 +68,10 @@
                         list.ConnectSerializer(new JsonSerial<HandyList>());
                         list.Serialize(pathName);
                         break;
-                    // case ".csv":
-                    //     list.ConnectSerializer(new );
-                    //     list.Serialize(pathName);
-                    //     break;
+                    case ".csv":
+                        list.ConnectSerializer(new CsvSerializer<HandyList>());
+                        list.Serialize(pathName);
+                        break;
                 }
 
             }
@@ -105,10 +105,10 @@
                         list.ConnectSerializer(new JsonSerial<HandyList>());
                         list.Deserialize(pathName);
                         break;
-                    // case ".csv":
-                    //     list.ConnectSerializer(new );
-                    //     list.Deserialize(pathName);
-                    //     break;
+                    case ".csv":
+                        list.ConnectSerializer(new CsvSerializer<HandyList>());
+                        list.Deserialize(pathName);
+                        break;
                 }
                 
                 foreach (var producer in this.list.Select(x => x.Producer).Distinct())

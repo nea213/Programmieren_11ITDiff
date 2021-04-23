@@ -10,4 +10,8 @@
       <ProjectReference Include="..\CC_HandyClass\CC_HandyClass.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="ServiceStack.Text" Version="5.11.0" />
+    </ItemGroup>
+
 </Project>
