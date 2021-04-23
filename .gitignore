@@ -22,3 +22,8 @@ Vertretung_Gast_15.01/.idea/
 *.class
 
 Verschlüsslen/.idea/
+
+CC_HandyApp/CC_HandyGUI/obj/
+ */obj/*
+
+CC_HandyApp/CC_HandyGUI/bin/Debug/netcoreapp3.1-windows/

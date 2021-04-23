@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CC_HandyApp", "CC_HandyApp\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CC_HandyClass", "CC_HandyClass\CC_HandyClass.csproj", "{F849D410-0515-4F7C-9C83-63C4A1BD8AFF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CC_HandyGUI", "CC_HandyGUI\CC_HandyGUI.csproj", "{4FFEECFB-D8EE-4DC2-ACF1-A0C6815133AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{F849D410-0515-4F7C-9C83-63C4A1BD8AFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F849D410-0515-4F7C-9C83-63C4A1BD8AFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F849D410-0515-4F7C-9C83-63C4A1BD8AFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FFEECFB-D8EE-4DC2-ACF1-A0C6815133AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FFEECFB-D8EE-4DC2-ACF1-A0C6815133AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FFEECFB-D8EE-4DC2-ACF1-A0C6815133AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FFEECFB-D8EE-4DC2-ACF1-A0C6815133AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
