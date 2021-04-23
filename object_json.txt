@@ -1,0 +1,72 @@
+[
+  {
+    "Producer": "Huawei",
+    "Model": "Ttdy1S3Q",
+    "SerialNumber": "ESQhZbod",
+    "Price": 525.13,
+    "Id": "0ab5f861-ab77-4efa-a345-cdc5f7daba62"
+  },
+  {
+    "Producer": "Huawei",
+    "Model": "TGzI2Cs2",
+    "SerialNumber": "mAyeVlS3",
+    "Price": 652.55,
+    "Id": "baea42c4-627d-48e9-b3e1-5d28e8b9e322"
+  },
+  {
+    "Producer": "Huawei",
+    "Model": "glYb2Ify",
+    "SerialNumber": "qUtLLNLP",
+    "Price": 415.97,
+    "Id": "66b1f31c-b44a-4355-bf7d-e9c601cbf85b"
+  },
+  {
+    "Producer": "Apple",
+    "Model": "kK1bF9dQ",
+    "SerialNumber": "Gk6pPgYH",
+    "Price": 496.77,
+    "Id": "410d801c-cf63-4e1d-a2d9-c8ffbe687efc"
+  },
+  {
+    "Producer": "Samsung",
+    "Model": "b2NqmDWB",
+    "SerialNumber": "FazlSFRs",
+    "Price": 659.88,
+    "Id": "160630e2-8a2c-44fe-9460-b47fe7466c48"
+  },
+  {
+    "Producer": "Apple",
+    "Model": "MFfZ7l3Z",
+    "SerialNumber": "tBFNxDVt",
+    "Price": 616.71,
+    "Id": "b966778e-1c84-44f7-a77a-860bba2f343f"
+  },
+  {
+    "Producer": "Huawei",
+    "Model": "G3hyEEbX",
+    "SerialNumber": "afS0XgxM",
+    "Price": 512.79,
+    "Id": "f1d41e3e-b47d-48e4-b695-e499365c8b7c"
+  },
+  {
+    "Producer": "Apple",
+    "Model": "WC4lxNym",
+    "SerialNumber": "b2nvPisL",
+    "Price": 409.94,
+    "Id": "9e250ab9-ed94-4231-9912-25ae5cbc030c"
+  },
+  {
+    "Producer": "Huawei",
+    "Model": "LXAb7kwc",
+    "SerialNumber": "52oiZlB9",
+    "Price": 648.64,
+    "Id": "b67c5d73-e1f2-44de-b468-7d3a5df8c838"
+  },
+  {
+    "Producer": "Samsung",
+    "Model": "ceFT9bE9",
+    "SerialNumber": "MpPtILrm",
+    "Price": 607.52,
+    "Id": "4a43a5f8-cb3d-464d-825a-6fb8c8dafc33"
+  }
+]
