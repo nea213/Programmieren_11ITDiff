@@ -87,6 +87,10 @@
                 string pathName = loadFileDialog.FileName;
                 FileInfo fInfo = new FileInfo(pathName);
                 string extension = fInfo.Extension;
+                this.list.Clear();
+                this.producerList.Items?.Clear();
+                this.producerList.Items.Add("--Alle--");
+                this.producerList.SelectedItem = "--Alle--";
                 switch (extension)
                 {
                     case ".bin":
@@ -106,13 +110,12 @@
                     //     list.Deserialize(pathName);
                     //     break;
                 }
+                
+                foreach (var producer in this.list.Select(x => x.Producer).Distinct())
+                {
+                    producerList.Items.Add(producer);
+                }
             }
-            if (loadFileDialog.FileName == "") return;
-            foreach (var producer in this.list.Select(x => x.Producer).Distinct())
-            {
-                producerList.Items.Add(producer);
-            }
-            
             listView_handy.Items.Refresh();
         }
 
@@ -124,8 +127,8 @@
 
         private void ProducerList_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var selected = (string) e.AddedItems[0];
-            if (selected == "--Alle--")
+            var selected = (string) producerList.SelectedItem;
+            if (selected == "--Alle--" || selected == null)
             {
                 listView_handy.ItemsSource = this.list;
             }
