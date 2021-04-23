@@ -1,8 +1,10 @@
-﻿namespace CC_HandyClass
+﻿using System;
+
+namespace CC_HandyClass
 {
-    public class Handy
+    [Serializable()]
+    public class Handy : DomainObject
     {
-        public int Id { get; set; }
         public string Producer { get; set; }
         public string Model { get; set; }
         public string SerialNumber { get; set; }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Xml.Serialization;
 using CC_HandyClass;
 
 namespace CC_HandyApp
@@ -8,7 +9,11 @@ namespace CC_HandyApp
     {
         static void Main(string[] args)
         {
-            var handyList = new HandyListClass();
+            var handyList = new HandyList();
+            var Binary = new Binary<HandyList>();
+            var XML = new Xml<HandyList>();
+            var Json = new JsonSerial<HandyList>();
+            
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
             var rnd = new Random();
             string[] producers = {"Apple", "Samsung", "Huawei"};
@@ -17,7 +22,6 @@ namespace CC_HandyApp
             {
                 var h = new Handy
                 {
-                    Id = i + 1,
                     Price = Math.Round((rnd.NextDouble() * (400 - 100) + 400), 2),
                     Model = new string(chars.Select(c => chars[rnd.Next(chars.Length)]).Take(8).ToArray()),
                     Producer = producers[rnd.Next(0, producers.Length)],
@@ -26,7 +30,19 @@ namespace CC_HandyApp
                 
                 handyList.Add(h);
             }
-
+            
+            handyList.ConnectSerializer(Binary);
+            handyList.Serialize(@"D:\SchulSachen\Programmieren_11ITDiff\object_bin.txt");
+            handyList.Deserialize(@"D:\SchulSachen\Programmieren_11ITDiff\object_bin.txt");
+            
+            handyList.ConnectSerializer(XML);
+            handyList.Serialize(@"D:\SchulSachen\Programmieren_11ITDiff\object_xml.txt");
+            handyList.Deserialize(@"D:\SchulSachen\Programmieren_11ITDiff\object_xml.txt");
+            
+            handyList.ConnectSerializer(Json);
+            handyList.Serialize(@"D:\SchulSachen\Programmieren_11ITDiff\object_json.txt");
+            handyList.Deserialize(@"D:\SchulSachen\Programmieren_11ITDiff\object_json.txt");
+            
             foreach (var h in handyList)
             {
                 Console.WriteLine(h.Id);
@@ -36,17 +52,6 @@ namespace CC_HandyApp
                 Console.WriteLine(h.Price);
                 Console.WriteLine("_______________________________");
             }
-            
-            Console.WriteLine($"Apple: {handyList.CountProducer("Apple")}");
-            Console.WriteLine($"Samsung: {handyList.CountProducer("Samsung")}");
-            Console.WriteLine($"Huawei: {handyList.CountProducer("Huawei")}");
-            Console.WriteLine(($"Gesammtsumme: {handyList.SumPrice()}"));
-            Console.WriteLine(handyList.GetHandy(2).Producer);
-            foreach (var h in handyList.SearchProducer("Apple"))
-            {
-                Console.WriteLine(h.Producer);
-            }
-            Console.WriteLine(handyList.SearchCheapestHandy().Model);
         }
     }
 }

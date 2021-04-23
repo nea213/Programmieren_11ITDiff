@@ -9,4 +9,8 @@
       <ProjectReference Include="..\CC_HandyClass\CC_HandyClass.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="SoapFormatter" Version="1.0.11" />
+    </ItemGroup>
+
 </Project>
