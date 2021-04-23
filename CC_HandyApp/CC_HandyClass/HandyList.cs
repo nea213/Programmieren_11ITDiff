@@ -9,10 +9,10 @@ namespace CC_HandyApp
     [Serializable()]
     public class HandyList : List<Handy>
     {
-        private ISerializeable<HandyList> _Serializeable { get; set; }
-        public void ConnectSerializer(ISerializeable<HandyList> s)
+        private ISerializable<HandyList> Serializable { get; set; }
+        public void ConnectSerializer(ISerializable<HandyList> s)
         {
-            _Serializeable = s;
+            Serializable = s;
         }
         
         public int CountProducer(string producer)
@@ -88,13 +88,13 @@ namespace CC_HandyApp
 
         public void Serialize(string path)
         {
-            this._Serializeable.Serialize(path, this);
+            this.Serializable.Serialize(path, this);
         }
         
         public void Deserialize(string path)
         {
             this.Clear();
-            var result = this._Serializeable.Deserialize(path);
+            var result = this.Serializable.Deserialize(path);
             this.AddRange(result);
         } 
     }

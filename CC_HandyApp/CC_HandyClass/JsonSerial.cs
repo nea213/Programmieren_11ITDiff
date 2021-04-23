@@ -4,7 +4,7 @@ using System.Text.Json;
 
 namespace CC_HandyClass
 {
-    public class JsonSerial<T>: ISerializeable<T>
+    public class JsonSerial<T>: ISerializable<T>
     {
         public void Serialize(string path, T output)
         { 

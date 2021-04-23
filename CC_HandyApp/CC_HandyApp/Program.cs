@@ -11,7 +11,7 @@ namespace CC_HandyApp
         {
             var handyList = new HandyList();
             var Binary = new Binary<HandyList>();
-            var XML = new XML<HandyList>();
+            var XML = new Xml<HandyList>();
             var Json = new JsonSerial<HandyList>();
             
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";

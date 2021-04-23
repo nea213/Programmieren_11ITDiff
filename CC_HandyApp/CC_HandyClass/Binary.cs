@@ -5,7 +5,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 namespace CC_HandyClass
 {
     [Serializable()]
-    public class Binary<T>: ISerializeable<T>
+    public class Binary<T>: ISerializable<T>
     {
         public void Serialize(string path, T output)
         {

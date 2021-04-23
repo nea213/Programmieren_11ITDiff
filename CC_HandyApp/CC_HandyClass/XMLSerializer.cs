@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 
 namespace CC_HandyClass
 {
-    public class XML<T>: ISerializeable<T>
+    public class Xml<T>: ISerializable<T>
     {
         public void Serialize(string path, T output)
         {
